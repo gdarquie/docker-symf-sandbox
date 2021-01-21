@@ -1,0 +1,10 @@
+version: "3.4"
+
+services:
+#  web:
+#    FROM caddy:2.2.1-builder-alpine
+
+  php:
+    build: .
+    ports:
+      - "8000:8000"
