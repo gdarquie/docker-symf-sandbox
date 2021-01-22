@@ -1,5 +1,8 @@
-start:
+start s:
 	symfony server:start
 
-build:
+build b:
 	docker-compose up
+
+ps:
+	docker-compose ps
