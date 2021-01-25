@@ -1,10 +1,37 @@
 version: "3.4"
 
 services:
-#  web:
-#    FROM caddy:2.2.1-builder-alpine
-
-  php:
-    build: .
+  web-nginx:
+    image: nginx:stable-alpine
+    container_name: web-nginx
+    volumes:
+      - "./docker/nginx/www:/usr/share/nginx/html:ro"
+      - "./docker/nginx/log:/var/log/nginx"
+      - "./docker/nginx/site.conf:/etc/nginx/nginx.conf:ro"
     ports:
-      - "8000:8000"
+      - "127.0.0.1:80:80"
+  php:
+    image: php:fpm-alpine
+    container_name: php
+    volumes:
+      - "./docker/nginx/www:/script:ro"
+
+# https://vonkrafft.fr/console/simple-site-php-avec-docker-nginx/
+
+#  web:
+#    image: nginx
+#    ports:
+#      - "8080:80"
+#    volumes:
+#      - ./docker/templates:/etc/nginx/myapp
+#      - ./docker/templates:/etc/nginx/myappp
+##      - /var/www/docker-study.loc/recipe-02/php:/var/www/myapp
+#      - /var/www/docker-study.loc/recipe-02/docker/site.conf:/etc/nginx/conf.d/site.conf
+#    depends_on:
+#      - php
+#
+#  php:
+#    image: php:8.0-fpm-alpine
+##    build: .
+
+# https://hackernoon.com/nginx-php-docker-how-to-get-php-page-up-with-local-domain-name-ho3x33f6
