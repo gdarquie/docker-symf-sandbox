@@ -1,0 +1,7 @@
+2021/01/24 23:50:15 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2021/01/24 23:52:02 [error] 21#21: *1 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2021/01/24 23:58:33 [error] 21#21: *3 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2021/01/24 23:58:34 [error] 21#21: *3 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2021/01/24 23:58:34 [error] 21#21: *3 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2021/01/24 23:58:34 [error] 21#21: *3 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2021/01/24 23:58:35 [error] 21#21: *3 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
