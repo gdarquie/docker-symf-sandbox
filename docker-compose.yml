@@ -10,6 +10,12 @@ services:
       - "./docker/nginx/site.conf:/etc/nginx/nginx.conf:ro"
     ports:
       - "127.0.0.1:80:80"
+  php:
+    image: php:fpm-alpine
+    container_name: php
+    volumes:
+      - "./docker/nginx/www:/script:ro"
+
 # https://vonkrafft.fr/console/simple-site-php-avec-docker-nginx/
 
 #  web:
